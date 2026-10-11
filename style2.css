@@ -1,0 +1,475 @@
+/* ==========================================
+   PET VACCINATION MANAGEMENT
+   EXTERNAL CASCADING STYLE SHEET
+   ========================================== */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    font-family:
+        "Trebuchet MS",
+        Arial,
+        sans-serif;
+
+    color: #342d38;
+
+    background:
+        linear-gradient(135deg,
+            #fff4f6,
+            #f3efff,
+            #eaf8f2);
+
+}
+
+
+/* ================= HEADER ================= */
+
+
+header {
+
+    height: 80px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background:
+        rgba(255, 255, 255, 0.85);
+
+    border-bottom:
+        1px solid #eadfe7;
+
+    box-shadow:
+        0 3px 15px rgba(90, 60, 80, 0.08);
+
+}
+
+
+.logo {
+
+    font-family: Georgia, serif;
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    color: #b85c8a;
+
+}
+
+
+nav a {
+
+    text-decoration: none;
+
+    color: #4d414a;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    margin-left: 12px;
+
+    padding: 10px 15px;
+
+    border-radius: 20px;
+
+    transition: 0.3s;
+
+}
+
+
+nav a:hover {
+
+    color: white;
+
+    background: #b85c8a;
+
+}
+
+
+/* ================= MAIN AREA ================= */
+
+
+.main-container {
+
+    min-height:
+        calc(100vh - 140px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content:
+        space-between;
+
+    gap: 70px;
+
+    padding: 65px 8%;
+
+}
+
+
+/* ================= LEFT SIDE ================= */
+
+
+.intro {
+
+    width: 52%;
+
+}
+
+
+.intro h1 {
+
+    max-width: 650px;
+
+    font-family: Georgia, serif;
+
+    font-size: 55px;
+
+    line-height: 1.15;
+
+    margin-bottom: 25px;
+
+    color: #382e3a;
+
+}
+
+
+.intro h1 span {
+
+    display: block;
+
+    margin-top: 5px;
+
+}
+
+
+.description {
+
+    max-width: 650px;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    color: #695c66;
+
+}
+
+
+/* ================= MAIN BUTTON ================= */
+
+
+.main-button {
+
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 13px 25px;
+
+    text-decoration: none;
+
+    color: white;
+
+    background: #b85c8a;
+
+    border-radius: 25px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 6px 15px rgba(184, 92, 138, 0.25);
+
+    transition: 0.3s;
+
+}
+
+
+.main-button:hover {
+
+    background: #93466d;
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+/* ================= RIGHT SIDE ================= */
+
+
+.service-area {
+
+    width: 44%;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 18px;
+
+}
+
+
+/* ================= SERVICE BOX ================= */
+
+
+.service-box {
+
+    min-height: 180px;
+
+    padding: 25px 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    color: #42373f;
+
+    background:
+        rgba(255, 255, 255, 0.78);
+
+    border: 1px solid rgba(255, 255, 255, 0.9);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 8px 25px rgba(79, 55, 72, 0.10);
+
+    transition: 0.35s;
+
+}
+
+
+.service-box:hover {
+
+    transform:
+        translateY(-7px);
+
+    box-shadow:
+        0 14px 28px rgba(79, 55, 72, 0.17);
+
+}
+
+
+/* ================= ICON ================= */
+
+
+.circle-icon {
+
+    width: 52px;
+
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 0 auto 12px;
+
+    border-radius: 50%;
+
+    font-size: 25px;
+
+    background: white;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.08);
+
+}
+
+
+/* ================= CARD TEXT ================= */
+
+
+.service-box h3 {
+
+    margin-bottom: 9px;
+
+    font-size: 18px;
+
+}
+
+
+.service-box p {
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    color: #756873;
+
+}
+
+
+/* ================= UNIQUE CARD COLORS ================= */
+
+
+.owner-box {
+
+    border-bottom:
+        5px solid #d78fb0;
+
+}
+
+
+.owner-box h3 {
+
+    color: #a84f7b;
+
+}
+
+
+.vaccination-box {
+
+    border-bottom:
+        5px solid #69b995;
+
+}
+
+
+.vaccination-box h3 {
+
+    color: #40886a;
+
+}
+
+
+.schedule-box {
+
+    border-bottom:
+        5px solid #e0b65e;
+
+}
+
+
+.schedule-box h3 {
+
+    color: #a87927;
+
+}
+
+
+.health-box {
+
+    border-bottom:
+        5px solid #8f80c2;
+
+}
+
+
+.health-box h3 {
+
+    color: #6e5aa7;
+
+}
+
+
+/* ================= FOOTER ================= */
+
+
+footer {
+
+    min-height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background: #433646;
+
+    color: #f5eaf0;
+
+    font-size: 14px;
+
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+
+@media(max-width: 850px) {
+
+    header {
+
+        height: auto;
+
+        flex-direction: column;
+
+        padding: 18px;
+
+    }
+
+
+    nav {
+
+        margin-top: 15px;
+
+    }
+
+
+    .main-container {
+
+        flex-direction: column;
+
+        padding: 45px 7%;
+
+    }
+
+
+    .intro {
+
+        width: 100%;
+
+        text-align: center;
+
+    }
+
+
+    .intro h1 {
+
+        font-size: 42px;
+
+    }
+
+
+    .service-area {
+
+        width: 100%;
+
+    }
+
+}

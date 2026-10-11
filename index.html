@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetVax - Pet Vaccination Management</title>
+<link rel="stylesheet" href="style2.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f2f7f8;
+            color: #333;
+        }
+        header {
+            background: #1769aa;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+        nav {
+            background: #124e80;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 3px 10px #ddd;
+        }
+        .card a {
+            color: #1769aa;
+            font-weight: bold;
+        }
+        footer {
+            background: #124e80;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🐾 PetVax</h1>
+        <p>Pet Vaccination Management System</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="owner.html">Owner</a>
+        <a href="vaccination.html">Vaccination</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="healthy.html">Healthy Care</a>
+        <a href="validation.html">Pet Registration</a>
+    </nav>
+
+    <main>
+        <h2>Welcome to PetVax!</h2>
+        <p>Manage pet details and vaccination records in one place.</p>
+
+        <div class="services">
+            <div class="card">
+                <h3>👤 Owner Details</h3>
+                <p>View owner and contact information.</p>
+                <a href="owner.html">View Details</a>
+            </div>
+
+            <div class="card">
+                <h3>💉 Pet Vaccination</h3>
+                <p>View vaccine records and status.</p>
+                <a href="vaccination.html">View Vaccination</a>
+            </div>
+
+            <div class="card">
+                <h3>📅 Vaccination Schedule</h3>
+                <p>Check vaccination dates and reminders.</p>
+                <a href="schedule.html">View Schedule</a>
+            </div>
+
+            <div class="card">
+                <h3>🐱 Healthy Pet Care</h3>
+                <p>Learn basic pet care tips.</p>
+                <a href="healthy.html">Read Tips</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>PetVax | Healthy Pets, Happy Families 🐾</p>
+    </footer>
+</body>
+</html>
