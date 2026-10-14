@@ -4,131 +4,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PetVax - Form Validation</title>
+    <title>PetVax - Pet Registration</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
+            padding: 20px;
             font-family: Arial, sans-serif;
-            background: #f2f7f8;
-            color: #333;
+            background: #fff4f6;
+            color: #342d38;
         }
 
-        header {
-            background: #1769aa;
-            color: white;
-            text-align: center;
-            padding: 25px;
-        }
-
-        main {
-            max-width: 500px;
+        .container {
+            max-width: 550px;
             margin: 30px auto;
-            padding: 25px;
+            padding: 28px;
             background: white;
-            border-radius: 12px;
-            box-shadow: 0 3px 12px #ddd;
+            border-radius: 18px;
+            box-shadow: 0 5px 20px #e5d5e0;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #b85c8a;
         }
 
         label {
             display: block;
-            margin-top: 15px;
+            margin: 16px 0 7px;
             font-weight: bold;
         }
 
         input, select, textarea {
             width: 100%;
-            padding: 10px;
-            margin-top: 6px;
-            box-sizing: border-box;
-            border: 1px solid #bbb;
-            border-radius: 5px;
+            padding: 12px;
+            border: 1px solid #cbbbc8;
+            border-radius: 8px;
+            font-size: 16px;
+            background: white;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: 2px solid #d78fb0;
+            border-color: #b85c8a;
         }
 
         button {
             width: 100%;
-            margin-top: 20px;
-            padding: 12px;
-            background: #1769aa;
-            color: white;
+            padding: 13px;
+            margin-top: 22px;
             border: none;
-            border-radius: 5px;
+            border-radius: 25px;
+            background: #b85c8a;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
             cursor: pointer;
         }
 
-        .error { color: red; }
-        .success { color: green; font-weight: bold; }
-        a { color: #1769aa; }
+        button:hover {
+            background: #93466d;
+        }
+
+        #message {
+            margin-top: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .back {
+            display: block;
+            margin-top: 18px;
+            text-align: center;
+            color: #93466d;
+        }
     </style>
 </head>
 
 <body>
-<header>
-    <h1>🐾 PetVax</h1>
-    <p>Pet Registration Form</p>
-</header>
+    <div class="container">
+        <h1>🐾 PetVax</h1>
+        <h2>Pet Registration</h2>
+        <p>Enter your details to register your pet.</p>
 
-<main>
-    <h2>Register Your Pet</h2>
+        <form id="petForm" autocomplete="off">
+            <label for="ownerName">Owner Name *</label>
+            <input type="text" id="ownerName" name="ownerName"
+                   placeholder="Enter your full name"
+                   autocomplete="off" required>
 
-    <form id="petForm">
-        <label for="owner">Owner Name</label>
-        <input type="text" id="owner" required>
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email"
+                   placeholder="Enter your email address"
+                   autocomplete="off" required>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" required>
+            <label for="mobile">Mobile Number *</label>
+            <input type="tel" id="mobile" name="mobile"
+                   placeholder="Enter 10-digit mobile number"
+                   inputmode="numeric" pattern="[6-9][0-9]{9}"
+                   maxlength="10" autocomplete="off" required>
 
-        <label for="mobile">Mobile Number</label>
-        <input type="text" id="mobile"
-               pattern="[0-9]{10}"
-               maxlength="10"
-               required>
+            <label for="petName">Pet Name *</label>
+            <input type="text" id="petName" name="petName"
+                   placeholder="Enter your pet's name"
+                   autocomplete="off" required>
 
-        <label for="petType">Pet Type</label>
-        <select id="petType" required>
-            <option value="">Select Pet Type</option>
-            <option>Cat</option>
-            <option>Dog</option>
-            <option>Rabbit</option>
-            <option>Bird</option>
-        </select>
+            <label for="petType">Pet Type *</label>
+            <select id="petType" name="petType" required>
+                <option value="">-- Select pet type --</option>
+                <option value="Cat">Cat</option>
+                <option value="Dog">Dog</option>
+                <option value="Rabbit">Rabbit</option>
+                <option value="Bird">Bird</option>
+                <option value="Other">Other</option>
+            </select>
 
-        <label for="gender">Pet Gender</label>
-        <select id="gender" required>
-            <option value="">Select Gender</option>
-            <option>Male</option>
-            <option>Female</option>
-        </select>
+            <label for="gender">Pet Gender *</label>
+            <select id="gender" name="gender" required>
+                <option value="">-- Select gender --</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Unknown">Unknown</option>
+            </select>
 
-        <label for="address">Address</label>
-        <textarea id="address" rows="3" required></textarea>
+            <label for="address">Address *</label>
+            <textarea id="address" name="address" rows="3"
+                      placeholder="Enter your address"
+                      autocomplete="off" required></textarea>
 
-        <button type="submit">Register Pet</button>
-        <p id="message" role="status"></p>
-    </form>
+            <button type="submit">Register Pet</button>
+            <p id="message" role="status" aria-live="polite"></p>
+        </form>
 
-    <p><a href="index.html">← Back to Home</a></p>
-</main>
+        <a class="back" href="index.html">← Back to Home</a>
+    </div>
 
-<script>
-document.getElementById("petForm").addEventListener(
-    "submit", function(event) {
-        event.preventDefault();
+    <script>
+        document.getElementById("petForm").addEventListener("submit", function(event) {
+            event.preventDefault();
 
-        const mobile = document.getElementById("mobile").value;
-        const message = document.getElementById("message");
+            document.getElementById("message").textContent =
+                "Form submitted successfully! Note: Details are not saved yet.";
 
-        if (!/^[0-9]{10}$/.test(mobile)) {
-            message.className = "error";
-            message.textContent =
-                "Enter a valid 10-digit mobile number.";
-            return;
-        }
-
-        message.className = "success";
-        message.textContent = "Pet Registration Successful!";
-    }
-);
-</script>
+            document.getElementById("message").style.color = "#27834a";
+            this.reset();
+        });
+    </script>
 </body>
 </html>
